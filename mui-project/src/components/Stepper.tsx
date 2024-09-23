@@ -8,6 +8,10 @@ import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+
 
 const steps = [
   {
@@ -118,6 +122,13 @@ export default function VerticalLinearStepper() {
                 </>
               )}
               {index === 2 && (
+                <>
+                 <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <DatePicker />
+                    </LocalizationProvider>
+                </>
+              )}
+              {index === 3 && (
                 <Box>
                   <Typography variant="body1">Review your information:</Typography>
                   <Typography variant="body2">Existing Application: {formData.existingApp}</Typography>
