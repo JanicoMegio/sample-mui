@@ -7,8 +7,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 export default function Footer() {
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <Grid container spacing={2}>
-                <Grid item xs={12} lg={3}>
+            <Grid container spacing={5}>
+                <Grid item xs={12} sm={4}>
                     <Typography>
                         Asialink Finance Corporation
                         SEC Registration No.: A119711768
@@ -30,7 +30,7 @@ export default function Footer() {
                 <Grid item xs={6} lg={3}>
                     <img src="https://placehold.co/200x100" alt="" />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={6} sm={4}>
                     <div style={{ marginBottom: '20px', textAlign: 'center' }}>
                         <img src="https://placehold.co/300x100" alt="Logo" style={{ height: '80px' }} />
                     </div>
@@ -57,7 +57,48 @@ export default function Footer() {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid container xs={12} sm={4}>
+                   <Grid item xs={6}>
+                   <List>
+                        <ListItem sx={{ paddingBottom: "0px" }}>
+                            <Typography>Terms and Conditions</Typography>
+                        </ListItem>
+                        <ListItem sx={{ paddingBottom: "0px" }}>
+                            <Typography>Privacy Policy</Typography>
+                        </ListItem>
+                        <ListItem sx={{ paddingBottom: "0px" }}> 
+                            <Typography>Load Products</Typography>
+                        </ListItem>
+                        <ListItem sx={{ paddingBottom: "0px" }}> 
+                            <Typography>Branches</Typography>
+                        </ListItem>
+                        <ListItem sx={{ paddingBottom: "0px" }}> 
+                            <Typography>Payment Options</Typography>
+                        </ListItem>
+                    </List>
+                   </Grid>
+                   <Grid item xs={6}>
+                   <List>
+                        <ListItem sx={{ paddingBottom: "0px" }}>
+                            <Typography>Terms and Conditions</Typography>
+                        </ListItem>
+                        <ListItem sx={{ paddingBottom: "0px" }}>
+                            <Typography>Privacy Policy</Typography>
+                        </ListItem>
+                        <ListItem sx={{ paddingBottom: "0px" }}> 
+                            <Typography>Load Products</Typography>
+                        </ListItem>
+                        <ListItem sx={{ paddingBottom: "0px" }}> 
+                            <Typography>Branches</Typography>
+                        </ListItem>
+                        <ListItem sx={{ paddingBottom: "0px" }}> 
+                            <Typography>Payment Options</Typography>
+                        </ListItem>
+                    </List>
+                   </Grid>
+                </Grid>
+
+                <Grid item xs={12} sm={4}>
                     <List sx={{ width: '100%', maxWidth: '400px', alignItems: 'center' }}>
                         <ListItem>
                             <ListItemAvatar>
@@ -84,46 +125,6 @@ export default function Footer() {
                             <ListItemText primary="customerservices@asialinkfinance.com.ph" />
                         </ListItem>
                     </List>
-                </Grid>
-                <Grid container sm={6} lg={12}>
-                   <Grid item xs={6}>
-                   <List>
-                        <ListItem sx={{ paddingBottom: "0px" }}>
-                            <Typography>Terms and Conditions</Typography>
-                        </ListItem>
-                        <ListItem sx={{ paddingBottom: "0px" }}>
-                            <Typography>Privacy Policy</Typography>
-                        </ListItem>
-                        <ListItem sx={{ paddingBottom: "0px" }}> 
-                            <Typography>Load Products</Typography>
-                        </ListItem>
-                        <ListItem sx={{ paddingBottom: "0px" }}> 
-                            <Typography>Branches</Typography>
-                        </ListItem>
-                        <ListItem sx={{ paddingBottom: "0px" }}> 
-                            <Typography>Payment Options</Typography>
-                        </ListItem>
-                    </List>
-                   </Grid>
-                   <Grid item xs={6}>
-                   <List>
-                        <ListItem sx={{ paddingBottom: "0px" }}>
-                            <Typography>Terms and Conditions</Typography>
-                        </ListItem>
-                        <ListItem sx={{ paddingBottom: "0px" }}>
-                            <Typography>Privacy Policy</Typography>
-                        </ListItem>
-                        <ListItem sx={{ paddingBottom: "0px" }}> 
-                            <Typography>Load Products</Typography>
-                        </ListItem>
-                        <ListItem sx={{ paddingBottom: "0px" }}> 
-                            <Typography>Branches</Typography>
-                        </ListItem>
-                        <ListItem sx={{ paddingBottom: "0px" }}> 
-                            <Typography>Payment Options</Typography>
-                        </ListItem>
-                    </List>
-                   </Grid>
                 </Grid>
             </Grid>
         </Box>
