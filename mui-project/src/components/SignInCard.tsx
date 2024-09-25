@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import MuiCard from '@mui/material/Card';
 import Checkbox from '@mui/material/Checkbox';
-import Divider from '@mui/material/Divider';
+{/* import Divider from '@mui/material/Divider'; */}
 import FormLabel from '@mui/material/FormLabel';
 import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -14,7 +14,7 @@ import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 
 import ForgotPassword from './ForgotPassword';
-import { GoogleIcon, FacebookIcon, SitemarkIcon } from './CustomIcons';
+{/* import { GoogleIcon, FacebookIcon} from './CustomIcons'; */}
 
 const Card = styled(MuiCard)(({ theme }) => ({
   display: 'flex',
@@ -87,9 +87,6 @@ export default function SignInCard() {
 
   return (
     <Card variant="outlined">
-      <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-        <SitemarkIcon />
-      </Box>
       <Typography
         component="h1"
         variant="h4"
@@ -121,6 +118,7 @@ export default function SignInCard() {
             sx={{ ariaLabel: 'email' }}
           />
         </FormControl>
+        
         <FormControl>
           <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
             <FormLabel htmlFor="password">Password</FormLabel>
@@ -169,6 +167,7 @@ export default function SignInCard() {
           </span>
         </Typography>
       </Box>
+      {/*
       <Divider>or</Divider>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Button
@@ -190,6 +189,7 @@ export default function SignInCard() {
           Sign in with Facebook
         </Button>
       </Box>
+      */}
     </Card>
   );
 }
