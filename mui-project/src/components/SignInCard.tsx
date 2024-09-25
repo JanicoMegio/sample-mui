@@ -3,18 +3,20 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import MuiCard from '@mui/material/Card';
 import Checkbox from '@mui/material/Checkbox';
-{/* import Divider from '@mui/material/Divider'; */}
+{/* import Divider from '@mui/material/Divider'; */ }
 import FormLabel from '@mui/material/FormLabel';
 import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Link from '@mui/material/Link';
+import { Link as RouterLink } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
-
 import { styled } from '@mui/material/styles';
 
+
+
 import ForgotPassword from './ForgotPassword';
-{/* import { GoogleIcon, FacebookIcon} from './CustomIcons'; */}
+{/* import { GoogleIcon, FacebookIcon} from './CustomIcons'; */ }
 
 const Card = styled(MuiCard)(({ theme }) => ({
   display: 'flex',
@@ -34,7 +36,11 @@ const Card = styled(MuiCard)(({ theme }) => ({
   }),
 }));
 
-export default function SignInCard() {
+type Props = {
+  onSwitchToRegister: () => void;
+};
+
+export default function SignInCard({ onSwitchToRegister }: Props) {
   const [emailError, setEmailError] = React.useState(false);
   const [emailErrorMessage, setEmailErrorMessage] = React.useState('');
   const [passwordError, setPasswordError] = React.useState(false);
@@ -118,13 +124,13 @@ export default function SignInCard() {
             sx={{ ariaLabel: 'email' }}
           />
         </FormControl>
-        
+
         <FormControl>
           <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
             <FormLabel htmlFor="password">Password</FormLabel>
             <Link
               component="button"
-              onClick={handleClickOpen}
+              onClick={onSwitchToRegister}
               variant="body2"
               sx={{ alignSelf: 'baseline' }}
             >
@@ -158,7 +164,8 @@ export default function SignInCard() {
           Don&apos;t have an account?{' '}
           <span>
             <Link
-              href="/material-ui/getting-started/templates/sign-in/"
+              component={RouterLink}
+              to="/Stepper"
               variant="body2"
               sx={{ alignSelf: 'center' }}
             >

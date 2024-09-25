@@ -13,6 +13,8 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 
+
+
 const steps = [
   {
     label: 'Do you have an existing application with us?',
@@ -23,12 +25,31 @@ const steps = [
     description: 'Please provide your name and contact information.',
   },
   {
-    label: 'Confirm Your Information',
+    label: 'Confirm Email and Phone Number',
+    description: 'Please review your information before submission.',
+  },
+  {
+    label: 'KYC',
+    description: 'Please review your information before submission.',
+  },
+  {
+    label: 'Complete Address',
+    description: 'Please review your information before submission.',
+  },
+  {
+    label: 'Set Username and Password',
+    description: 'Please review your information before submission.',
+  },
+  {
+    label: 'Terms and Conditions',
     description: 'Please review your information before submission.',
   },
 ];
+  type Props = {
+    onSwitchToLogin: () => void;
+  };
 
-export default function VerticalLinearStepper() {
+export default function VerticalLinearStepper({ onSwitchToLogin }: Props) {
   const [activeStep, setActiveStep] = React.useState(0);
   const [formData, setFormData] = React.useState({
     existingApp: '',
@@ -137,6 +158,24 @@ export default function VerticalLinearStepper() {
                   <Typography variant="body2">Phone: {formData.phone}</Typography>
                 </Box>
               )}
+              {index === 4 && (
+                <Box>
+                  <Typography variant="body1">Review your information:</Typography>
+                  <Typography variant="body2">Existing Application: {formData.existingApp}</Typography>
+                  <Typography variant="body2">Name: {formData.name}</Typography>
+                  <Typography variant="body2">Email: {formData.email}</Typography>
+                  <Typography variant="body2">Phone: {formData.phone}</Typography>
+                </Box>
+              )}
+              {index === 5 && (
+                <Box>
+                  <Typography variant="body1">Review your information:</Typography>
+                  <Typography variant="body2">Existing Application: {formData.existingApp}</Typography>
+                  <Typography variant="body2">Name: {formData.name}</Typography>
+                  <Typography variant="body2">Email: {formData.email}</Typography>
+                  <Typography variant="body2">Phone: {formData.phone}</Typography>
+                </Box>
+              )}
               <Box sx={{ mb: 2 }}>
                 <Button
                   variant="contained"
@@ -163,8 +202,12 @@ export default function VerticalLinearStepper() {
           <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
             Reset
           </Button>
+          <Button onClick={onSwitchToLogin} color="secondary" fullWidth>
+            Back to Login
+          </Button>
         </Paper>
       )}
+        
     </Box>
   );
 }
